@@ -1,2 +1,2 @@
-# Belajar-Membuat-Aplikasi-Back-End-untuk-Pemula
-dicoding submission untuk kelas Belajar Membuat Aplikasi Back-End untuk Pemula
+# Belajar-Membuat-Aplikasi-Back-End-untuk-Pemula-dengan-Google-Cloud
+Submission proyek akhir kelas Belajar Membuat Aplikasi Back-End untuk Pemula dengan Google Cloud

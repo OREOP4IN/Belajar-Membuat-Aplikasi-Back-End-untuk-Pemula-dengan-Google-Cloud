@@ -1,7 +1,7 @@
 {
   "name": "submission",
   "version": "1.0.0",
-  "description": "dicoding submission untuk kelas Belajar Membuat Aplikasi Back-End untuk Pemula",
+  "description": "dicoding submission untuk kelas Belajar Membuat Aplikasi Back-End untuk Pemula dengan Google Cloud",
   "main": "src/index.js",
   "type": "module",
   "dependencies": {
