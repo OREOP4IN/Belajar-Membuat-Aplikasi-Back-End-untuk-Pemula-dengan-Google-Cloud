@@ -1,18 +1,17 @@
 {
   "name": "submission",
   "version": "1.0.0",
-  "description": "doni wirawan submission",
+  "description": "OREOP4IN submission",
   "main": "src/index.js",
   "type": "module",
   "scripts": {
-    "dev": "nodemon src/index",
     "start": "node src/index"
   },
-  "author": "doniwirawan",
+  "author": "OREOP4IN",
   "license": "ISC",
   "repository": {
-      "type": "git",
-      "url": "https://github.com/doniwirawan/Belajar-Membuat-Aplikasi-Back-End-untuk-Pemula"
+    "type": "git",
+    "url": "https://github.com/OREOP4IN/Belajar-Membuat-Aplikasi-Back-End-untuk-Pemula-dengan-Google-Cloud"
   },
   "dependencies": {
     "@hapi/hapi": "^21.1.0",
@@ -22,7 +21,6 @@
     "eslint": "^8.31.0",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-config-airbnb-base": "^15.0.0",
-    "eslint-plugin-import": "^2.26.0",
-    "nodemon": "^2.0.20"
+    "eslint-plugin-import": "^2.26.0"
   }
 }

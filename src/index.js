@@ -10,11 +10,10 @@ const init = async () => {
         origin: ["*"],
       },
     },
-  })
+  });
 
-  server.route(routes)
-
-  await server.start()
+  server.route(routes);
+  await server.start();
 }
 
-init()
+init();

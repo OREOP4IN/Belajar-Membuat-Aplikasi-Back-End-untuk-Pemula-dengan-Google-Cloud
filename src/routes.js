@@ -4,7 +4,7 @@ import {
   getBookByIdHandler,
   editBookByIdHandler,
   deleteBookByIdHandler,
-} from "./routesHandler.js"
+} from "./handlers.js"
 
 const routes = [
   {
