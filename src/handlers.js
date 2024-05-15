@@ -80,18 +80,77 @@ const addBookHandler = (request, h) => {
 };
 
 const getAllBooksHandler = (request, h) => {
+  const { name, reading, finished } = request.query;
+
+  if (name) {
+    const booksByName = bookshelf.filter(
+      (book) => book.name.toLowerCase().includes(name.toLowerCase()),
+    );
+
     const response = h.response({
-        status: "success",
-        data: {
-          books: books.map((book) => ({
-            id: book.id,
-            name: book.name,
-            publisher: book.publisher,
-          })),
-        },
-      })
-      .code(200)
+      status: 'success',
+      data: {
+        books: booksByName.map((book) => ({
+          id: book.id,
+          name: book.name,
+          publisher: book.publisher,
+        })),
+      },
+    })
+    .code(200)
     return response
+  }
+
+  if (reading) {
+    const booksByReading = reading === '1'
+      ? bookshelf.filter((book) => book.reading === true)
+      : bookshelf.filter((book) => book.reading === false);
+
+    const response = h.response({
+      status: 'success',
+      data: {
+        books: booksByReading.map((book) => ({
+          id: book.id,
+          name: book.name,
+          publisher: book.publisher,
+        })),
+      },
+    })
+    .code(200)
+    return response
+  }
+
+  if (finished) {
+    const booksByFinished = finished === '1'
+      ? bookshelf.filter((book) => book.finished === true)
+      : bookshelf.filter((book) => book.finished === false);
+
+    const response = h.response({
+      status: 'success',
+      data: {
+        books: booksByFinished.map((book) => ({
+          id: book.id,
+          name: book.name,
+          publisher: book.publisher,
+        })),
+      },
+    })
+    .code(200)
+    return response
+  }
+
+  const response = h.response({
+    status: 'success',
+    data: {
+      books: bookshelf.map((book) => ({
+        id: book.id,
+        name: book.name,
+        publisher: book.publisher,
+      })),
+    },
+  })
+  .code(200)
+  return response
 };
 
 const getBookByIdHandler = (request, h) => {
